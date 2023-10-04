@@ -1,5 +1,7 @@
 package ex005;
 
+import java.util.ArrayList;
+
 public class Basicbox<T extends Basicfruits>{
     
     private T [] array;
@@ -26,22 +28,26 @@ public class Basicbox<T extends Basicfruits>{
     public int getWeightBox()
     {
         int totalWeight = 0;
-        for(int i=0;i<array.length;i++)
-        {
-            
-            totalWeight = totalWeight + array[i].getWeight();
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] != null) {
+                    totalWeight += array[i].getWeight();
+                }
+            }
         }
         return totalWeight;
     }
+
+    
 
 
 
     
 
-    // public String toString()
-    // {
-    //     return String.format("В коробке:%d фруктов,масса коробки:%d");
-    // }
+    public String toString()
+    {
+        return String.format("В коробке:%d фруктов,масса коробки:%d",amount(),getWeightBox());
+    }
 
 
     
