@@ -7,6 +7,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import javax.sound.midi.Soundbank;
+
 public class Program
 {
 
@@ -19,7 +21,7 @@ public class Program
 
         Basicbox<Apple> applebox = new Basicbox<>(new Apple[5]);
         Basicbox<Orange> orangebox = new Basicbox<>(new Orange[6]);
-        Basicbox<Apple> applebox2 = new Basicbox<>(new Apple[4]);
+        Basicbox<Apple> applebox2 = new Basicbox<>(new Apple[5]);
 
 
         List<Basicbox> generallist = new ArrayList<>();
@@ -30,20 +32,27 @@ public class Program
 
         generallist.add(applebox);
         generallist.add(orangebox);
+
+
+        
+        applebox.moveto(applebox2);
+
+        System.out.println(applebox);
+        System.out.println(applebox2);
         
 
        // System.out.println(applebox.getWeightBox());
 
-        Sorttype sorttype = Sorttype.Ascending;
+        // Sorttype sorttype = Sorttype.Ascending;
 
-        BoxComporator boxComparator = new BoxComporator(sorttype);
+        // BoxComporator boxComparator = new BoxComporator(Sorttype.Ascending);
 
-        Collections.sort(generallist,boxComparator);
+        // Collections.sort(generallist,boxComparator);
 
-        for(Object item : generallist)
-        {
-            System.out.println(item);
-        }
+        // for(Object item : generallist)
+        // {
+        //     System.out.println(item);
+        // }
         
         
         

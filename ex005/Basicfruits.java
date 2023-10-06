@@ -5,4 +5,5 @@ public interface Basicfruits{
     public int getWeight();
     
     
+    
 }

@@ -1,6 +1,9 @@
 package ex005;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
+
 
 public class Basicbox<T extends Basicfruits>{
     
@@ -18,6 +21,27 @@ public class Basicbox<T extends Basicfruits>{
         {
             array[++index] = value;
         }
+    }
+
+
+    public void moveto(Basicbox<T> Choicearray)
+    {
+        if(array.length <= Choicearray.array.length)
+        {
+            for(int i=0;i<array.length;i++)
+            {
+                Choicearray.array[i] = array[i];
+                array[i] = null;
+            }
+            Choicearray.index = this.index;
+            index -= amount();
+            
+        }
+        else
+        {  
+            System.out.println("Эта коробка слишком маленькая");
+        }
+        
     }
 
     public int amount()

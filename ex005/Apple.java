@@ -26,5 +26,7 @@ public class Apple implements Basicfruits{
             System.out.println("Не свежий");
         }
     }
+
+    
     
 }
